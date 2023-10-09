@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Page Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: purple;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        td {
+            text-align: center;
+            border: 1px solid red;
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        #date {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <table>
+        <tr>
+            <td rowspan="4" ><img src="https://th.bing.com/th/id/OIP.99z5hb-qifCKyDcCp_3-EQHaEK?pid=ImgDet&rs=1" alt="Autumn Image"></td>
+            <td>Dvoretskyi<br>Andrii</td>
+            <td rowspan="4" ><img src="https://lubelskierowerem.pl/wp-content/uploads/2016/02/zwierzyniec-kaplica-na-wodzie.jpg" alt="Morning Image"></td>
+        </tr>
+        <tr>
+            <td style="width: 200px;"><a href="https://www.facebook.com/groups/616168075762727">Techikum w Zwierzyncu.</a></td>
+        </tr>
+
+        <tr>
+            <td id="date"></td>
+        </tr>
+        <tr> 
+   
+            <td style="width: 200px;"><a href="project03-subpage.html">Projekt 03 - grafika</a></td>
+            
+        </tr>
+    </table>
+</div>
+<script type="text/javascript">
+    function updateDate() {
+        const dateElement = document.getElementById("date");
+        const currentDate = new Date();
+        dateElement.innerText = "Current Date: " + currentDate.toLocaleString();
+    }
+
+   
+    updateDate();
+
+   
+    setInterval(updateDate, 1000);
+</script>
+</body>
+</html>
